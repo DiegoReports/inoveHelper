@@ -49,7 +49,25 @@ body {
   bottom: -.5rem;
   right: -2rem;
   transform: rotate(180deg);
-} 
+}
+
+.btn {
+  outline: none;
+  border: none;
+  border-radius: 5rem;
+  background: var(--color);
+  color: var(--color-white);
+  cursor: pointer;
+  height: 3.5rem;
+  width: 15rem;
+  font-size: 1.7rem;
+  box-shadow: 0 .2rem .5rem rgba(0,0,0,.3);
+}
+
+.btn:hover {
+  letter-spacing: .1rem;
+  opacity: .8;
+}
 
 .header {
   display: flex;
@@ -222,6 +240,160 @@ body {
   width: 50vw;
 }
 
+.about .row .content h3 {
+  font-size: 3rem;
+  color: var(--color);
+}
+
+.about .row .content p {
+  font-size: 1.5rem;
+  color: #333;
+  padding: 1rem 0;
+}
+
+.about::before, .about::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  opacity: .2;
+  border-radius: 50%;
+}
+
+.about::before {
+  height: 50rem;
+  width: 50rem;
+  background: #ccc;
+  bottom: -10rem;
+  left: -10rem;
+}
+
+.about::after {
+  height: 60rem;
+  width: 60rem;
+  background: var(--color);
+  top: -10rem;
+  right: -10rem;
+}
+
+
+
+
+/* SECTION CARD */
+.wrapper-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #fafafa;
+  /* width: 100%; */
+  min-height: 100vh;
+  width: 100vw;
+}
+
+.wrapper-box p {
+  margin-top: 10px;
+  padding: 0 4rem;
+}
+
+.content-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  /* width: 100%; */
+  margin-top: 30px;
+  padding: 0 15rem;
+}
+
+.card {
+  min-height: 220px;
+  width: 320px;
+  padding: 30px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #fff;
+  margin: 10px 4px;
+  box-shadow: 0px 15px 25px rgba(0,0,0,0.2);
+  transition: 3s;
+}
+
+.card i {
+  margin: 20px;
+  color: var(--color);
+}
+
+.card h2 {
+  margin-bottom: 12px;
+  font-weight: 600;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.card p {
+  color: #6c757d;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.card:hover i,
+.card:hover p {
+  color: var(--color-white);
+}
+
+.card:hover h2 {
+  font-weight: 800;
+}
+
+.card:nth-child(1):hover {
+  background: linear-gradient(45deg,
+                              rgba(8, 185, 255, 0.637) 0%,
+                              rgba(3, 123, 192, 0.589) 100%),
+                              url('./assets/img/cards/p1.jpg');
+  background-size: cover;
+}
+
+.card:nth-child(2):hover {
+  background: linear-gradient(45deg,
+                              rgba(8, 185, 255, 0.637) 0%,
+                              rgba(3, 123, 192, 0.589) 100%),
+                              url('./assets/img/cards/p2.jpg');
+  background-size: cover;
+}
+
+.card:nth-child(3):hover {
+  background: linear-gradient(45deg,
+                              rgba(8, 185, 255, 0.637) 0%,
+                              rgba(3, 123, 192, 0.589) 100%),
+                              url('./assets/img/cards/p3.jpg');
+  background-size: cover;
+}
+
+.card:nth-child(4):hover {
+  background: linear-gradient(45deg,
+                              rgba(8, 185, 255, 0.637) 0%,
+                              rgba(3, 123, 192, 0.589) 100%),
+                              url('./assets/img/cards/p4.jpg');
+  background-size: cover;
+}
+
+.card:nth-child(5):hover {
+  background: linear-gradient(45deg,
+                              rgba(8, 185, 255, 0.637) 0%,
+                              rgba(3, 123, 192, 0.589) 100%),
+                              url('./assets/img/cards/p5.jpg');
+  background-size: cover;
+}
+
+.card:nth-child(6):hover {
+  background: linear-gradient(45deg,
+                              rgba(8, 185, 255, 0.637) 0%,
+                              rgba(3, 123, 192, 0.589) 100%),
+                              url('./assets/img/cards/p6.jpg');
+  background-size: cover;
+}
+
 /* Media queries */
 @media (max-width: 768px) {
   html {
@@ -272,5 +444,31 @@ body {
 
   .home .slogan {
     font-size: 1.7rem;
+  }
+
+  .about .row {
+    flex-flow: column-reverse;
+    padding: 0 2rem;
+  }
+
+  .about .row .image img {
+    width: 100vw;
+  }
+
+}
+
+@media (max-width: 991px) {
+  .wrapper-box {
+    padding: 25px;
+  }
+
+  .content-box {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .card {
+    min-width: 300px;
+    margin: 10px auto;
   }
 }
